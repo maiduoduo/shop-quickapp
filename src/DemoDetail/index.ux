@@ -1,0 +1,49 @@
+<template>
+    <!-- template里只能有一个根节点 -->
+    <div class="demo-page" for="detail">
+      <img src="{{image}}" alt="" srcset="">
+      <text class="title">{{text}}</text>
+      <text >我被传过来了{{id}}</text>
+      <text>{{price}}</text>
+      <input class="btn" type="button" value="addCart">
+    </div>
+  </template>
+  
+  <style>
+    .demo-page {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .btn {
+    width: 550px;
+    height: 86px;
+    margin-top: 75px;
+    border-radius: 43px;
+    background-color: #09ba07;
+    font-size: 30px;
+    color: #ffffff;
+  }
+  
+    .title {
+      font-size: 40px;
+      text-align: center;
+    }
+  </style>
+  
+  <script>
+    import fetch from '@system.fetch'
+    export default {
+      data: {
+        detail:[],
+        text: '欢迎打开详情页',
+      },
+      onInit(){
+        console.info('key: ' + this.key)
+      },
+      onMenuPress() {
+        this.$app.showMenu()
+      }
+    }
+  </script>
+  
