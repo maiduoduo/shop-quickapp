@@ -1,92 +1,91 @@
 <template>
-    <list>
-      <!-- 轮播图 -->
-      <list-item type="jiugong">
-        <swiper class="banner" autoplay="true" interval="4000">
-            <stack class="banner">
-              <image class="banner-image" src="https://img.alicdn.com/bao/uploaded/TB1U5w_db1YBuNjSszeSuublFXa.jpg_q90.jpg_.webp"></image>
-            </stack>
-            <stack class="banner">
-                <image class="banner-image" src="https://img.alicdn.com/bao/uploaded/TB1U5w_db1YBuNjSszeSuublFXa.jpg_q90.jpg_.webp"></image>
-              </stack>
-          </swiper>
-      </list-item>
-      <!-- 九宫格 -->
-      <list-item type="jiugong">
-        <div class="home_list">
-          <div class="home_list_li">
-            <img src="http://p6563v2ck.bkt.clouddn.com/tx.png" alt="图片" >
-            <text>T恤</text>
-          </div>
-          <div class="home_list_li">
-            <img src="http://p6563v2ck.bkt.clouddn.com/wt.png" alt="图片" >
-            <text>外套</text>
-          </div>
-          <div class="home_list_li">
-            <img src="http://p6563v2ck.bkt.clouddn.com/kz.png" alt="图片" >
-            <text>裤子</text>
-          </div>
-          <div class="home_list_li">
-            <img src="http://p6563v2ck.bkt.clouddn.com/xz.png" alt="图片" >
-            <text>鞋子</text>
-          </div>
-          <div class="home_list_li">
-            <img src="http://p6563v2ck.bkt.clouddn.com/rm.png" alt="图片" >
-            <text>热卖</text>
-          </div>
-          <div class="home_list_li">
-              <img src="http://p6563v2ck.bkt.clouddn.com/wz.png" alt="图片" >
-            <text>袜子</text>
-          </div>
-          <div class="home_list_li">
-            <img src="http://p6563v2ck.bkt.clouddn.com/sb.png" alt="图片" >
-            <text>手表</text>
-          </div>
-          <div class="home_list_li">
-            <img src="http://p6563v2ck.bkt.clouddn.com/mz.png" alt="图片" >
-            <text>帽子</text>
-          </div>
+  <list>
+    <!-- 轮播图 -->
+    <list-item type="jiugong">
+      <swiper class="banner" autoplay="true" interval="4000">
+        <stack class="banner">
+          <image class="banner-image" src="https://img.alicdn.com/bao/uploaded/TB1U5w_db1YBuNjSszeSuublFXa.jpg_q90.jpg_.webp"></image>
+        </stack>
+        <stack class="banner">
+          <image class="banner-image" src="https://img.alicdn.com/bao/uploaded/TB1U5w_db1YBuNjSszeSuublFXa.jpg_q90.jpg_.webp"></image>
+        </stack>
+      </swiper>
+    </list-item>
+    <!-- 九宫格 -->
+    <list-item type="jiugong">
+      <div class="home_list">
+        <div class="home_list_li">
+          <img src="http://p6563v2ck.bkt.clouddn.com/tx.png" alt="图片">
+          <text>T恤</text>
         </div>
-      </list-item>
-      
-      <list-item type="jiugong">
-        <div class="proposal">
-            <img src="http://p6563v2ck.bkt.clouddn.com/tuijian.png" alt="新品推荐">
+        <div class="home_list_li">
+          <img src="http://p6563v2ck.bkt.clouddn.com/wt.png" alt="图片">
+          <text>外套</text>
         </div>
-      </list-item>
+        <div class="home_list_li">
+          <img src="http://p6563v2ck.bkt.clouddn.com/kz.png" alt="图片">
+          <text>裤子</text>
+        </div>
+        <div class="home_list_li">
+          <img src="http://p6563v2ck.bkt.clouddn.com/xz.png" alt="图片">
+          <text>鞋子</text>
+        </div>
+        <div class="home_list_li">
+          <img src="http://p6563v2ck.bkt.clouddn.com/rm.png" alt="图片">
+          <text>热卖</text>
+        </div>
+        <div class="home_list_li">
+          <img src="http://p6563v2ck.bkt.clouddn.com/wz.png" alt="图片">
+          <text>袜子</text>
+        </div>
+        <div class="home_list_li">
+          <img src="http://p6563v2ck.bkt.clouddn.com/sb.png" alt="图片">
+          <text>手表</text>
+        </div>
+        <div class="home_list_li">
+          <img src="http://p6563v2ck.bkt.clouddn.com/mz.png" alt="图片">
+          <text>帽子</text>
+        </div>
+      </div>
+    </list-item>
 
-     <list-item>
-       <div class="box">
-          <div class="list_box" for="{{list}}" onclick="goDetail($item)">
-            <div class="list_box_img">
-              <img src="{{$item.image}}" alt="图片">
-            </div>
-            <div class="list_box_name">
-              <text>{{$item.name}}</text>
-            </div>
-            <div class="list_box_box" >
-                <text class="price">¥{{$item.price}}</text>
-                <text class="agio">¥{{$item.agio}}</text>
-            </div>
+    <list-item type="jiugong">
+      <div class="proposal">
+        <img src="http://p6563v2ck.bkt.clouddn.com/tuijian.png" alt="新品推荐">
+      </div>
+    </list-item>
+
+    <list-item>
+      <div class="box">
+        <div class="list_box" for="{{list}}" onclick="goDetail($item)">
+          <div class="list_box_img">
+            <img src="{{$item.image}}" alt="图片">
           </div>
-       </div>
-       
-     </list-item>
+          <div class="list_box_name">
+            <text>{{$item.name}}</text>
+          </div>
+          <div class="list_box_box">
+            <text class="price">¥{{$item.price}}</text>
+            <text class="agio">¥{{$item.agio}}</text>
+          </div>
+        </div>
+      </div>
+
+    </list-item>
   </list>
 </template>
 
 <style>
-  .home_list{
+  .home_list {
     width: 100%;
     height: 330px;
-    /* background-color: #000000; */
     display: flex;
-   
     justify-content: center;
     flex-wrap: wrap;
 
   }
-  .home_list_li{
+
+  .home_list_li {
     width: 150px;
     height: 150px;
     background: #000000;
@@ -95,38 +94,44 @@
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    align-items:center
+    align-items: center
   }
-  .home_list_li image{
+
+  .home_list_li image {
     width: 90px;
     height: 90px;
   }
-  .proposal{
+
+  .proposal {
     width: 100%;
     height: 120px;
   }
-  .banner{
+
+  .banner {
     width: 100%;
     height: 400px;
     background-color: #000000
   }
-  .banner-image{
+
+  .banner-image {
     width: 100%;
     height: 100%;
   }
-  .box{
+
+  .box {
     display: flex;
     flex-wrap: wrap;
   }
-  .list_box{
+
+  .list_box {
     width: 50%;
     height: 450px;
-    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .list_box_img{
+
+  .list_box_img {
     width: 100%;
     height: 340px;
     background: #d35252;
@@ -135,32 +140,33 @@
     display: block;
     padding-left: 2px
   }
-  /* .list_box_img img{
-    width: 100%;
-    height: 100%;
-  } */
-  .list_box_name{
+
+  .list_box_name {
     width: 500px;
     padding-left: 13px;
     padding-top: 3px;
   }
-  .list_box_name text{
+
+  .list_box_name text {
     font-size: 25px
   }
-  .list_box_box{
+
+  .list_box_box {
     width: 100%;
     height: 50px;
   }
-  .list_box_box .price{
+
+  .list_box_box .price {
     float: left;
     color: #ff6702;
     padding-left: 13px
   }
-  .list_box_box .agio{
+
+  .list_box_box .agio {
     color: #a8a8a8;
     padding-left: 100px;
     font-size: 19px;
-    text-decoration: line-through 
+    text-decoration: line-through
   }
 </style>
 
@@ -170,31 +176,31 @@
   export default {
     data: {
       title: '示例页面',
-      list:[],
+      list: [],
       chaishu: 'Hello, world!'
     },
-    getlist(){
-      var _this=this
+    getlist() {
+      var _this = this
       fetch.fetch({
-        url:"http://p6acqdvet.bkt.clouddn.com/_data_json.json",
-        success:function(res){
-          const json=JSON.parse(res.data).json
-          _this.list=json
+        url: "http://p6acqdvet.bkt.clouddn.com/_data_json.json",
+        success: function (res) {
+          const json = JSON.parse(res.data).json
+          _this.list = json
         }
       })
     },
-    goDetail:function(item){
+    goDetail: function (item) {
       console.log(item.image)
       router.push({
-        uri:'/DemoDetail',
-        params:{
-          id:item.id,
-          price:item.price,
-          image:item.image
+        uri: '/DemoDetail',
+        params: {
+          id: item.id,
+          price: item.price,
+          image: item.image
         }
       })
     },
-    onInit(){
+    onInit() {
       this.getlist()
       this.$page.setTitleBar({ text: '首页' })
     },
