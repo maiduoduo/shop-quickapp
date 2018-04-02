@@ -1,0 +1,107 @@
+<import name="home" src="../home/index"></import>
+<import name="dynamic" src="../dynamic/index"></import>
+<import name="cart" src="../cart/index"></import>
+<import name="my" src="../my/index"></import>
+<template>
+    <div class="wanandroid-page">
+      <div class="flexible-tabs">
+        <tabs onchange="changeTabactive" index="{{footerIndex}}">
+          <tab-content class="flexible-tab-content">
+            <div class="tab-content-section">
+              <home if="{{tabItems[0]}}"></home>
+            </div>
+            <div class="tab-content-section">
+              <dynamic if="{{tabItems[1]}}"></dynamic>
+            </div>
+            <div class="tab-content-section">
+              <cart if="{{tabItems[2]}}"></cart>
+            </div>
+            <div class="tab-content-section">
+                <my if="{{tabItems[3]}}"></my>
+              </div>
+          </tab-content>
+        </tabs>
+        <div class="flexible-tabbar">
+          <div for="{{(index, item) in tabItems}}" class="tab-item" onclick="clickTabBar(index)">
+            <image class="tab-icon" src="{{item.icon[footerIndex === index ? 1 : 0]}}"></image>
+            <text class="{{footerIndex === index ? 'active' : 'tab-text'}}">{{item.text}}</text>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  
+    export default {
+      data() {
+        return {
+          footerIndex: 0,
+          tabItems: [
+            {
+              text: '首页',
+              icon: ['http://p6drtc064.bkt.clouddn.com/home.png', 'http://p6drtc064.bkt.clouddn.com/home_xz.png']
+            },
+            {
+              text: '购物车',
+              icon: ['http://p6drtc064.bkt.clouddn.com/gwc.png', 'http://p6drtc064.bkt.clouddn.com/gwc_xz.png']
+            },
+            {
+              text: '动态',
+              icon: ['http://p6jnqmfwv.bkt.clouddn.com/dynamic.png', 'http://p6jnqmfwv.bkt.clouddn.com/dynamic-selected.png']
+            },
+            {
+              text: '我的',
+              icon: ['http://p6drtc064.bkt.clouddn.com/my.png', 'http://p6drtc064.bkt.clouddn.com/my_xz.png']
+            }
+          ]
+        }
+      },
+      changeTabactive (e) {
+        this.changeCurrent(e.index)
+      },
+      clickTabBar (index) {
+        this.changeCurrent(index)
+      },
+      changeCurrent(index) {
+        this.$page.setTitleBar({ text: this.tabItems[index].text })
+        this.tabItems[index].show = true
+        this.footerIndex = index
+      }
+    }
+  </script>
+  
+  <style>
+  .wanandroid-page .flexible-tabs {
+    display: flex;
+    flex-direction: column;
+  }
+  .flexible-tabs .flexible-tabbar {
+    display: flex;
+    border-top-width: 1px;
+    border-top-color: #eeeeee;
+  }
+  .flexible-tabbar .tab-item {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+  }
+  .tab-item .tab-icon {
+    width: 56px;
+    height: 56px;
+    padding: 5px;
+  }
+  
+  .tab-item .tab-text {
+    font-size: 20px;
+    color: #aaaaaa;
+  }
+
+  .tab-item .active {
+    font-size: 20px;
+    color: #ff6702;
+  }
+  </style>

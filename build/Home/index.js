@@ -47,9 +47,9 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $app_template$ = __webpack_require__(7)
-	var $app_style$ = __webpack_require__(8)
-	var $app_script$ = __webpack_require__(9)
+	var $app_template$ = __webpack_require__(4)
+	var $app_style$ = __webpack_require__(5)
+	var $app_script$ = __webpack_require__(6)
 	
 	$app_define$('@app-component/index', [], function($app_require$, $app_exports$, $app_module$){
 	     $app_script$($app_module$, $app_exports$, $app_require$)
@@ -67,10 +67,7 @@
 /* 1 */,
 /* 2 */,
 /* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
+/* 4 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -80,7 +77,7 @@
 	    {
 	      "type": "list-item",
 	      "attr": {
-	        "type": "jiugong"
+	        "type": "swiper"
 	      },
 	      "children": [
 	        {
@@ -440,14 +437,13 @@
 	}
 
 /***/ },
-/* 8 */
+/* 5 */
 /***/ function(module, exports) {
 
 	module.exports = {
 	  ".home_list": {
 	    "width": "100%",
 	    "height": "330px",
-	    "display": "flex",
 	    "justifyContent": "center",
 	    "flexWrap": "wrap"
 	  },
@@ -455,7 +451,6 @@
 	    "width": "150px",
 	    "height": "150px",
 	    "float": "left",
-	    "display": "flex",
 	    "flexDirection": "column",
 	    "justifyContent": "center",
 	    "flexWrap": "wrap",
@@ -497,13 +492,11 @@
 	    "height": "100%"
 	  },
 	  ".box": {
-	    "display": "flex",
 	    "flexWrap": "wrap"
 	  },
 	  ".list_box": {
 	    "width": "50%",
 	    "height": "450px",
-	    "display": "flex",
 	    "justifyContent": "center",
 	    "flexWrap": "wrap"
 	  },
@@ -600,7 +593,7 @@
 	}
 
 /***/ },
-/* 9 */
+/* 6 */
 /***/ function(module, exports) {
 
 	module.exports = function(module, exports, $app_require$){'use strict';
@@ -641,11 +634,13 @@
 	  goDetail: function goDetail(item) {
 	    console.log(item.image);
 	    _system2.default.push({
-	      uri: '/DemoDetail',
+	      uri: '/HomeDetail',
 	      params: {
-	        id: item.id,
+	        name: item.name,
 	        price: item.price,
-	        image: item.image
+	        image: item.image,
+	        agio: item.agio,
+	        amount: item.amount
 	      }
 	    });
 	  },

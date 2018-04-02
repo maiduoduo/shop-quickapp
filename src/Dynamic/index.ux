@@ -1,0 +1,5 @@
+<template>
+    <div id="dongtai">
+        <text>这里是动态</text>
+    </div>
+</template>

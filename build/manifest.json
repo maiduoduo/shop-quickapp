@@ -1,6 +1,6 @@
 {
   "package": "com.application.demo",
-  "name": "s",
+  "name": "shop-quickapp",
   "versionName": "1.0.0",
   "versionCode": "1",
   "minPlatformVersion": "101",
@@ -29,12 +29,15 @@
     "designWidth": 640
   },
   "router": {
-    "entry": "Home",
+    "entry": "index",
     "pages": {
+      "index": {
+        "component": "index"
+      },
       "Home": {
         "component": "index"
       },
-      "DemoDetail": {
+      "HomeDetail": {
         "component": "index"
       },
       "About": {
@@ -48,11 +51,11 @@
     "menu": true,
     "pages": {
       "Home": {
-        "titleBarText": "示例页",
+        "titleBarText": "首页",
         "menu": false
       },
       "DemoDetail": {
-        "titleBarText": "详情页"
+        "titleBarText": "商品详情"
       },
       "About": {
         "menu": false

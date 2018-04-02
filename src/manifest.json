@@ -19,8 +19,11 @@
     "designWidth": 640
   },
   "router": {
-    "entry": "Home",
+    "entry": "index",
     "pages": {
+      "index": {
+        "component": "index"
+      },
       "Home": {
         "component": "index"
       },
