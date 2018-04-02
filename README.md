@@ -28,5 +28,5 @@ vue2.0商城   [地址点这里,正在重构中](https://github.com/Mynameisfwk/
 
 ## 效果图
 ![](http://p6i59meab.bkt.clouddn.com/1CF76AF09CE03A439F0867690D29C1A6_gaitubao_com_360x640.jpg)
-![](http://p6i59meab.bkt.clouddn.com/37221278C2EE6F50211B214A00E6A805.jpg)
+![](http://p6i59meab.bkt.clouddn.com/37221278C2EE6F50211B214A00E6A805_gaitubao_com_360x640.jpg)
 ![](http://p6i59meab.bkt.clouddn.com/A1FCBD3A17275401B8AB55D823B77ABD_gaitubao_com_360x640.jpg)
